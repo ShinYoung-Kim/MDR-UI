@@ -11,9 +11,9 @@
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },
   "dependencies": {
-    "@acme/ui": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@mdr-ui/toast": "workspace:*"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
