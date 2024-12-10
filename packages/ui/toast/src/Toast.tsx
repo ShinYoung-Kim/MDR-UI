@@ -42,7 +42,14 @@ type ToastRootProps = {} & PropsWithChildren<{}>;
 
 const Root = forwardRef<HTMLDivElement, ToastRootProps>((props, ref) => {
   const { children } = props;
-  return <div ref={ref}>{children}</div>;
+  return (
+    <div
+      ref={ref}
+      className="bg-gray-8 bg-opacity-75 rounded-md p-3 text-white backdrop-opacity-35 backdrop-blur-xl backdrop-saturate-150 shadow-lg"
+    >
+      {children}
+    </div>
+  );
 });
 
 Root.displayName = "ToastRoot";
