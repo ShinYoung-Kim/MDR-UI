@@ -45,7 +45,7 @@ const Root = forwardRef<HTMLDivElement, ToastRootProps>((props, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-gray-8 bg-opacity-75 rounded-md p-3 text-white backdrop-opacity-35 backdrop-blur-xl backdrop-saturate-150 shadow-lg"
+      className="bg-gray-500 bg-opacity-75 rounded-md p-4 text-white mix-blend-hard-light backdrop-opacity-70 backdrop-blur-md backdrop-saturate-150 shadow-lg border-1 border-white"
     >
       {children}
     </div>
