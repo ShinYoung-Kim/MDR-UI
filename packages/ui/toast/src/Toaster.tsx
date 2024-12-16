@@ -7,7 +7,7 @@ type ToasterProps = {};
 export const Toaster = forwardRef<HTMLDivElement, ToasterProps>((props, ref) => {
   const { toastList } = useToaster();
   return (
-    <div ref={ref}>
+    <section ref={ref}>
       {toastList.map(({ id, title, description }) => {
         return (
           <Toast.Root key={id}>
@@ -18,6 +18,6 @@ export const Toaster = forwardRef<HTMLDivElement, ToasterProps>((props, ref) => 
           </Toast.Root>
         );
       })}
-    </div>
+    </section>
   );
 });
