@@ -26,9 +26,9 @@ export const Toaster = forwardRef<HTMLDivElement, ToasterProps>((props, ref) => 
 
   return (
     <section ref={ref} className={style}>
-      {toastList.map(({ id, title, description }) => {
+      {toastList.map(({ id, title, description, type }) => {
         return (
-          <Toast.Root key={id}>
+          <Toast.Root key={id} type={type}>
             {title && <Toast.Title title={title} />}
             {description && <Toast.Description description={description} />}
             <Toast.Action />

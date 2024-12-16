@@ -15,3 +15,15 @@ export const toasterStyle = cva("fixed flex flex-col gap-5", {
     },
   },
 });
+
+export const toastRootStyle = cva("glass-xs", {
+  variants: {
+    type: {
+      info: "bg-blue-200 backdrop-blur-none text-blue-500",
+      success: "bg-green-200 backdrop-blur-none text-green-600",
+      warning: "bg-yellow-200 backdrop-blur-none text-yellow-600",
+      error: "bg-red-200 backdrop-blur-none text-red-500",
+      default: "",
+    },
+  },
+});

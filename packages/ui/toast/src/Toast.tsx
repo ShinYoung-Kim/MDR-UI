@@ -1,4 +1,7 @@
 import { forwardRef, PropsWithChildren } from "react";
+import { toastRootStyle } from "./style";
+import { cx } from "class-variance-authority";
+import { ToastType } from "./type";
 
 type ToastTitleProps = {
   title: string;
@@ -38,12 +41,16 @@ const Close = forwardRef<HTMLDivElement, ToastCloseProps>((props, ref) => {
 
 Close.displayName = "ToastClose";
 
-type ToastRootProps = {} & PropsWithChildren<{}>;
+type ToastRootProps = {
+  type?: ToastType;
+} & PropsWithChildren<{}>;
 
 const Root = forwardRef<HTMLDivElement, ToastRootProps>((props, ref) => {
-  const { children } = props;
+  const { children, type = "default" } = props;
+  const style = toastRootStyle({ type });
+
   return (
-    <div ref={ref} className="glass-xs">
+    <div ref={ref} className={style}>
       {children}
     </div>
   );
